@@ -1,0 +1,22 @@
+ALGORITHM phrase
+VAR
+    nbrm, count2,i,nbrc:INTEGER; 
+    ch: STRING; 
+BEGIN
+    nrbm=1; 
+    nbrv=0; 
+    ch="This is a realy simple sentnece."; 
+    nbrc=ch.length; 
+    write("le nombre de caractère dans la phrase est ",nbrc); 
+    FOR i FROM 0 TO ch.length STEP i++  DO
+    IF (ch[i]==" ") THEN
+        nbrm=nbrm+1; 
+    END_IF
+    IF ( ch[i].ToUpper in['A','E','I','O','U']) THEN
+        nbrv=nbrv+1; 
+    END_IF
+    END_FOR
+    write("le nombre de mot est",nbrm); 
+    write("le nombre de voyelle est",nbrv); 
+
+END
